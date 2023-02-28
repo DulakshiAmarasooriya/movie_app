@@ -116,8 +116,10 @@ class DashboardScreen extends StatelessWidget {
             ),
             Container(
               height: 250,
-              child: ListView(
+              child: ListView.builder(
                 scrollDirection: Axis.horizontal,
+                itemCount: movieList.length,
+                itemBuilder: (BuildContext context, i) => HorizontalList(i),
                 // ignore: prefer_const_literals_to_create_immutables
                 // children: [
                 //   const HorizontalList(),
