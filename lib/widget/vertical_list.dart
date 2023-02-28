@@ -3,8 +3,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter/widgets.dart';
 
+import '../model/movie.dart';
+
 class VerticalListItem extends StatelessWidget {
-  const VerticalListItem({super.key});
+  final int index;
+  VerticalListItem(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +20,14 @@ class VerticalListItem extends StatelessWidget {
               Container(
                 height: 150,
                 width: 100,
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(5),
                     topLeft: Radius.circular(5),
                   ),
                   image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://imageio.forbes.com/blogs-images/scottmendelson/files/2019/04/screencapture-file-C-Users-JckNa-OneDrive-Desktop-b-avengersendgame-horizontal-friday-17793-04d92fbf-webp-2019-04-23-08_14_14.jpg'),
+                    image: NetworkImage(bestmovieList[index].imageUrl),
                   ),
                 ),
               ),
@@ -35,8 +37,8 @@ class VerticalListItem extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text(
-                      'Avengers End Game',
+                    Text(
+                      bestmovieList[index].title,
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -47,8 +49,7 @@ class VerticalListItem extends StatelessWidget {
                     ),
                     Container(
                       width: 200,
-                      child: const Text(
-                          'After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.'),
+                      child: Text(bestmovieList[index].description),
                     )
                   ],
                 ),

@@ -34,7 +34,7 @@ final movieList = [
       imageUrl:
           'https://www.mvnews.org/wp-content/uploads/2022/03/uncharted-2.jpeg',
       description:
-          'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.',
+          'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. ',
       rating: '4.1',
       year: '2022 ',
       duration: '1h 56m'),
@@ -44,7 +44,7 @@ final movieList = [
       imageUrl:
           'https://images.moviesanywhere.com/b17b3aa07713067cffbed0b1b148d4c8/5f0760c5-1a61-45d5-b7dc-7bcd229c00c5.jpg',
       description:
-          'Charlie aims to make it big in the sport of robot boxing. When he learns about his son, he reluctantly teams up with him after which, they discover each other while trying to win with an old robot..',
+          'Charlie aims to make it big in the sport of robot boxing. ..',
       rating: '7/10',
       year: '2011  ',
       duration: '2h 7m'),
@@ -67,7 +67,7 @@ final bestmovieList = [
       imageUrl:
           'https://www.mvnews.org/wp-content/uploads/2022/03/uncharted-2.jpeg',
       description:
-          'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan. However, they face competition from Santiago Moncada, who believes that the treasure belongs to him.',
+          'Victor Sullivan recruits Nathan Drake to help him find the lost fortune of Ferdinand Magellan.',
       rating: '4.1',
       year: '2022 ',
       duration: '1h 56m'),
@@ -76,8 +76,7 @@ final bestmovieList = [
       title: 'Real Steel',
       imageUrl:
           'https://images.moviesanywhere.com/b17b3aa07713067cffbed0b1b148d4c8/5f0760c5-1a61-45d5-b7dc-7bcd229c00c5.jpg',
-      description:
-          'Charlie aims to make it big in the sport of robot boxing. When he learns about his son, he reluctantly teams up with him after which, they discover each other while trying to win with an old robot..',
+      description: 'Charlie aims to make it big in the sport of robot boxing..',
       rating: '7/10',
       year: '2011  ',
       duration: '2h 7m'),
