@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../model/movie.dart';
 import '../widget/horizontal_list.dart';
+import '../widget/topRatedMovie.dart';
 import '../widget/vertical_list.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -79,17 +80,20 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
             Container(
-              height: 840,
+              height: 496,
               padding: const EdgeInsets.symmetric(horizontal: 10),
-              child: ListView(
+              child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
-                children: [
-                  VerticalListItem(),
-                  VerticalListItem(),
-                  VerticalListItem(),
-                  VerticalListItem(),
-                  VerticalListItem(),
-                ],
+                itemCount: movieList.length,
+                itemBuilder: (BuildContext context, i) => VerticalListItem(i),
+
+                // children: [
+                //   VerticalListItem(),
+                //   VerticalListItem(),
+                //   VerticalListItem(),
+                //   VerticalListItem(),
+                //   VerticalListItem(),
+                // ],
               ),
             ),
             SizedBox(
@@ -116,8 +120,10 @@ class DashboardScreen extends StatelessWidget {
             ),
             Container(
               height: 250,
-              child: ListView(
+              child: ListView.builder(
                 scrollDirection: Axis.horizontal,
+                itemCount: topmovieList.length,
+                itemBuilder: (BuildContext context, i) => TopRatedList(i),
                 // ignore: prefer_const_literals_to_create_immutables
                 // children: [
                 //   const HorizontalList(),
