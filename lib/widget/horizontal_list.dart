@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import '../model/movie.dart';
 
 class HorizontalList extends StatelessWidget {
-  const HorizontalList({super.key});
+  final int index;
+  HorizontalList(this.index);
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +20,9 @@ class HorizontalList extends StatelessWidget {
                 height: 200,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  image: const DecorationImage(
+                  image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: NetworkImage(
-                        'https://imageio.forbes.com/blogs-images/scottmendelson/files/2019/04/screencapture-file-C-Users-JckNa-OneDrive-Desktop-b-avengersendgame-horizontal-friday-17793-04d92fbf-webp-2019-04-23-08_14_14.jpg'),
+                    image: NetworkImage(movieList[index].imageUrl),
                   ),
                 ),
               ),
@@ -29,8 +30,8 @@ class HorizontalList extends StatelessWidget {
             const SizedBox(
               height: 10,
             ),
-            const Text(
-              'Star Wars',
+            Text(
+              movieList[index].title,
               style: TextStyle(
                 fontSize: 16,
                 fontWeight: FontWeight.bold,
