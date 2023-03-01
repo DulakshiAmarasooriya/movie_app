@@ -6,6 +6,7 @@ import '../widget/topRatedMovie.dart';
 import '../widget/vertical_list.dart';
 
 class DashboardScreen extends StatelessWidget {
+  static const routeName2 = '/dashboard_screen';
   const DashboardScreen({super.key});
 
   @override
